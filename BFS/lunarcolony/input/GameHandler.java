@@ -9,6 +9,8 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import BFS.lunarcolony.LunarApplet;
+//Nolan
+import BFS.lunarcolony.entity.Astronaut;
 import BFS.lunarcolony.gui.GuiElement;
 import BFS.lunarcolony.gui.GuiLabel;
 import BFS.lunarcolony.gui.GuiProgressBar;
@@ -119,8 +121,17 @@ public class GameHandler implements KeyListener
 			if(e.getKeyCode() == KeyEvent.VK_D) { velX += 6; }
 			else if(e.getKeyCode() == KeyEvent.VK_A) { velX -= 6; }
 			
+			//Testing key for movement (Nolan)
+			if(e.getKeyCode() == KeyEvent.VK_M) 
+			{ 
+				System.out.println("Key 'M' pressed");
+				Astronaut test = new Astronaut(World.entities.get(0).bounds.x, World.entities.get(0).bounds.y, 64, 64);
+				World.entities.set(0, test);
+				try { test.goToward(0, 0); } catch (InterruptedException e1) {	e1.printStackTrace(); }
+			}
+			
 			if(e.getKeyCode() == KeyEvent.VK_V) { velX = 0; velY = 0; }
-			if(e.getKeyCode() == KeyEvent.VK_ESCAPE) { System.out.println("ESCAPE!"); LunarApplet.state = LunarApplet.GameState.IN_GAME_MENU; }
+			if(e.getKeyCode() == KeyEvent.VK_ESCAPE) { LunarApplet.state = LunarApplet.GameState.IN_GAME_MENU; }
 		}
 	}
 	@Override public void keyReleased(KeyEvent e) 
