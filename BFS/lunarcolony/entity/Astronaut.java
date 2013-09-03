@@ -2,7 +2,6 @@ package BFS.lunarcolony.entity;
 
 import java.awt.Point;
 
-import BFS.lunarcolony.graphic.Renderer;
 import BFS.lunarcolony.world.World;
 
 public class Astronaut extends Entity
