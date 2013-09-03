@@ -9,8 +9,6 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import BFS.lunarcolony.LunarApplet;
-//Nolan
-import BFS.lunarcolony.entity.Astronaut;
 import BFS.lunarcolony.gui.GuiElement;
 import BFS.lunarcolony.gui.GuiLabel;
 import BFS.lunarcolony.gui.GuiProgressBar;
