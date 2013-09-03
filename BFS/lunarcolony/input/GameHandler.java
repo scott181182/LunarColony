@@ -124,10 +124,9 @@ public class GameHandler implements KeyListener
 			//Testing key for movement (Nolan)
 			if(e.getKeyCode() == KeyEvent.VK_M) 
 			{ 
-				System.out.println("Key 'M' pressed");
 				Astronaut test = new Astronaut(World.entities.get(0).bounds.x, World.entities.get(0).bounds.y, 64, 64);
 				World.entities.set(0, test);
-				try { test.goToward(0, 0); } catch (InterruptedException e1) {	e1.printStackTrace(); }
+				test.goToward(test.bounds.x + 4 , test.bounds.y + 4);
 			}
 			
 			if(e.getKeyCode() == KeyEvent.VK_V) { velX = 0; velY = 0; }
