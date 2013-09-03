@@ -120,7 +120,7 @@ public class GameHandler implements KeyListener
 			else if(e.getKeyCode() == KeyEvent.VK_A) { velX -= 6; }
 			
 			if(e.getKeyCode() == KeyEvent.VK_V) { velX = 0; velY = 0; }
-			if(e.getKeyCode() == KeyEvent.VK_ESCAPE) { System.out.println("ESCAPE!"); LunarApplet.state = LunarApplet.GameState.IN_GAME_MENU; }
+			if(e.getKeyCode() == KeyEvent.VK_ESCAPE) { LunarApplet.state = LunarApplet.GameState.IN_GAME_MENU; }
 		}
 	}
 	@Override public void keyReleased(KeyEvent e) 
