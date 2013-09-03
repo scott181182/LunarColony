@@ -29,17 +29,17 @@ public class Astronaut extends Entity
 	
 	public void goToward(int x, int y)
 	{
-		double distance = Math.sqrt(Math.pow(x - this.bounds.x, 2) + Math.pow(y - this.bounds.y, 2));
+		double distance = Math.sqrt((x - this.bounds.x) * (x - this.bounds.x) + (y - this.bounds.y) * (y - this.bounds.y));
 		double theta = Math.atan2(y - this.bounds.y, x - this.bounds.x);
 		if(distance < this.getSpeed())
 		{
-			this.bounds.x = this.bounds.x + (int) Math.round(distance * Math.cos(theta));
-			this.bounds.y = this.bounds.y + (int) Math.round(distance * Math.sin(theta));
+			this.bounds.x = x;
+			this.bounds.y = y;
 		}
 		else
 		{
-			this.bounds.x = this.bounds.x + (int) Math.round(this.getSpeed() * Math.cos(theta));
-			this.bounds.y = this.bounds.y + (int) Math.round(this.getSpeed() * Math.sin(theta));	
+			this.bounds.x += Math.round(this.getSpeed() * Math.cos(theta));
+			this.bounds.y += Math.round(this.getSpeed() * Math.sin(theta));	
 		}
 	}
 	
