@@ -22,8 +22,7 @@ public class World
 	public Image worldImage;
 	public Random worldRand;
 	public Point hover, select, lander;
-	//Static Modifier Added (Nolan)
-	public static ArrayList<Entity> entities;
+	public ArrayList<Entity> entities;
 	
 	private Tile[][] worldTiles = new Tile[WORLD_SIZE.width][WORLD_SIZE.height];
 	
