@@ -121,14 +121,6 @@ public class GameHandler implements KeyListener
 			if(e.getKeyCode() == KeyEvent.VK_D) { velX += 6; }
 			else if(e.getKeyCode() == KeyEvent.VK_A) { velX -= 6; }
 			
-			//Testing key for movement (Nolan)
-			if(e.getKeyCode() == KeyEvent.VK_M) 
-			{ 
-				Astronaut test = new Astronaut(World.entities.get(0).bounds.x, World.entities.get(0).bounds.y, 64, 64);
-				World.entities.set(0, test);
-				test.goToward(test.bounds.x + 4 , test.bounds.y + 4);
-			}
-			
 			if(e.getKeyCode() == KeyEvent.VK_V) { velX = 0; velY = 0; }
 			if(e.getKeyCode() == KeyEvent.VK_ESCAPE) { LunarApplet.state = LunarApplet.GameState.IN_GAME_MENU; }
 		}
