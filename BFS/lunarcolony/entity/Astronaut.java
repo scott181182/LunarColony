@@ -19,10 +19,7 @@ public class Astronaut extends Entity
 	{
 		if(goal != null)
 		{
-			int x = this.goal.x - (this.bounds.x + this.bounds.width); boolean xN = x < 0; 
-			int y = this.goal.y - (this.bounds.y + this.bounds.height); boolean yN = y < 0;
-			double c2 = Math.sqrt(x * x + y * y);
-			
+			goToward(goal.x, goal.y);
 		}
 	}
 	

@@ -85,6 +85,7 @@ public class World
 				if(e instanceof Astronaut)
 				{
 					if(this.select.x != -1 && this.select.y != -1) { ((Astronaut)e).setGoal(new Point(select.x * TILE_SIZE, select.y * TILE_SIZE)); }
+					else { ((Astronaut)e).setGoal(null); }
 				}
 				e.tick();
 			}
